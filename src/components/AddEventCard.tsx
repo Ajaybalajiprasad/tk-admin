@@ -13,7 +13,6 @@ export default function AddEventCard(
   { title, day, id, category }: props,
 ) {
   const { addEvent } = useCart((state) => state);
-  const _date = new Date(day);
   return (
     <section
       className={cn(
@@ -37,7 +36,8 @@ export default function AddEventCard(
           </span>
         </h1>
         <h1 className=" text-xs">
-          {`${_date.getUTCDate()}-${_date.getUTCMonth()}-${_date.getUTCFullYear()}`}
+          {day === "DAY1" ? "29/02/2024"  : (day === "DAY2" ? "01/03/2024" : "02/03/2024")}
+
         </h1>
       </section>
       <h1 className=" text-3xl font-bold">₹ 150</h1>
