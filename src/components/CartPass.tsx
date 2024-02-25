@@ -28,7 +28,7 @@ export default function CartPass({ day, event }: prop) {
     return null;
 
   return (
-    <section className="text-cream border-y border-y-cream py-4 select-none">
+    <section className={cn("text-cream rounded-xl py-4 px-4 select-none", (event.WK.length > 0 || event.PRO.length > 0) ? "bg-amber-500 text-accentBlack": "bg-accentGrey text-accentWhite")}>
       <div className="flex items-end justify-between">
         <h1 className="text-2xl lg:text-5xl">
           {event.PRO.length === 1 &&
