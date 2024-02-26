@@ -19,9 +19,9 @@ export default function Cart() {
     []
   );
   
-  sum += (cart.DAY1.WK.length === 1) ? 350 : (cart.DAY1.WK.length === 2 ? 500 : (cart.DAY1.GEN.length > 0 ? 150 : 0));
-  sum += (cart.DAY2.WK.length === 1) ? 350 : (cart.DAY2.WK.length === 2 ? 500 : (cart.DAY2.GEN.length > 0 ? 150 : 0));
-  sum += (cart.DAY3.WK.length === 1) ? 350 : (cart.DAY3.WK.length === 2 ? 500 : (cart.DAY3.GEN.length > 0 ? 150 : 0));
+  sum += (cart.DAY1.PRO.length === 1) ? (cart.DAY1.WK.length === 1) ? 700 : (cart.DAY1.WK.length === 2 ? 850 : 350) : (cart.DAY1.GEN.length !== 0) ? 150 : 0;
+  sum += (cart.DAY2.PRO.length === 1) ? (cart.DAY2.WK.length === 1) ? 700 : (cart.DAY2.WK.length === 2 ? 850 : 350) : (cart.DAY2.GEN.length !== 0) ? 150 : 0;
+  sum += (cart.DAY3.PRO.length === 1) ? (cart.DAY3.WK.length === 1) ? 700 : (cart.DAY3.WK.length === 2 ? 850 : 350) : (cart.DAY3.GEN.length !== 0) ? 150 : 0;
 
   useEffect(() => {
     const fetchFolders = async () => {
